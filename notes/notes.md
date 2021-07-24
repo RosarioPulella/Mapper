@@ -1,0 +1,1 @@
+[Bit of advice on haskell+nix](https://matrix.to/#/!RbXGJhHMsnQcNIDFWN:nixos.org/$xPw7oadvGGMaAFMnasX5Vg8aWIYRoSLohx-pZMRCDgA?via=nixos.org&via=matrix.org&via=evil.red)
