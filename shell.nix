@@ -10,6 +10,6 @@ pkgs.mkShell {
     niv
     rnix-lsp
   ] ++ [
-    obelisk.shell
+    obelisk.command
   ];
 }
