@@ -1,14 +1,3 @@
-/* Map
-NOTE: Width and Height might not be needed?
-*/
-CREATE TABLE Map (
-    id INT,
-    image DATA NOT NULL,
-    width REAL NOT NULL,
-    height REAL NOT NULL,
-    PRIMARY KEY (id),
-)
-
 /* Region
 Can be on a map.
 NOTE: Think on how we want to store the vector graphical representation of a Region,
