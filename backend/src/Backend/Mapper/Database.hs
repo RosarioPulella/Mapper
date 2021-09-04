@@ -1,10 +1,16 @@
 {-# LANGUAGE DeriveGeneric, FlexibleInstances, MultiParamTypeClasses #-}
-module Backend.Mapper.Database where
+module Backend.Mapper.Database 
+  ( MapperDb(..)
+  , mapperDb
+  ) where
 
-import Backend.Mapper.Database.Map
-import Backend.Mapper.Database.Region
+import Backend.Mapper.Database.Map (MapT)
+import Backend.Mapper.Database.Region (RegionT)
 
-import Database.Beam (Generic, Database, TableEntity, DatabaseSettings, defaultDbSettings)
+import Database.Beam (Generic, Database, TableEntity)
+
+import Database.Beam.Migrate (CheckedDatabaseSettings, defaultMigratableDbSettings)
+import Database.Beam.Postgres (Postgres)
 
 data MapperDb f = MapperDb
                 { maps :: f (TableEntity MapT)
@@ -13,5 +19,5 @@ data MapperDb f = MapperDb
 
 instance Database be MapperDb
 
-mapperDb :: DatabaseSettings be MapperDb
-mapperDb = defaultDbSettings
+mapperDb :: CheckedDatabaseSettings Postgres MapperDb
+mapperDb = defaultMigratableDbSettings

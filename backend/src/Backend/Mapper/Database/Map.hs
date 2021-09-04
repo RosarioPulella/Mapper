@@ -7,6 +7,8 @@ module Backend.Mapper.Database.Map
 
 import Prelude hiding (id)
 
+import GHC.Int
+
 import Data.Text     (Text)
 import Database.Beam (C, Generic, PrimaryKey, Identity, Beamable, Table, primaryKey)
 {-|
@@ -15,7 +17,7 @@ The Map table contains visual maps to place interactive Regions on.
 NOTE: Width and Height might not be needed?
 -}
 data MapT f = Map
-    { id :: C f Int        -- ^ The Id of the map.
+    { id :: C f Int32        -- ^ The Id of the map.
     , image :: C f Text    -- ^ TODO: The data or path to the image to display for the map.
     , width :: C f Double  -- ^ The width of the image.
     , height :: C f Double -- ^ The height of the image.
@@ -36,7 +38,7 @@ MapT is a Beam Table
 Its primary key is just id.
 -}
 instance Table MapT where
-    data PrimaryKey MapT f = MapId (C f Int) deriving Generic
+    data PrimaryKey MapT f = MapId (C f Int32) deriving Generic
     primaryKey = MapId . id
 
 instance Beamable (PrimaryKey MapT)
