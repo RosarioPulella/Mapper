@@ -13,6 +13,8 @@ library
                , beam-postgres
                , common
                , frontend
+               , gargoyle
+               , gargoyle-postgresql-connect
                , obelisk-backend
                , obelisk-route
                , text
