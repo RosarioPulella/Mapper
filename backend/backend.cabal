@@ -20,10 +20,6 @@ library
                , text
   exposed-modules:
     Backend
-  other-modules:
-    Backend.Mapper.Database
-    Backend.Mapper.Database.Map
-    Backend.Mapper.Database.Region
   ghc-options: -Wall -Wredundant-constraints -Wincomplete-uni-patterns -Wincomplete-record-updates -O -fno-show-valid-hole-fits
 
 executable backend
