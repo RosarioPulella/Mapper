@@ -17,7 +17,7 @@ The Map table contains visual maps to place interactive Regions on.
 NOTE: Width and Height might not be needed?
 -}
 data MapT f = Map
-    { id :: C f Int32        -- ^ The Id of the map.
+    { id :: C f Int32      -- ^ The Id of the map.
     , image :: C f Text    -- ^ TODO: The data or path to the image to display for the map.
     , width :: C f Double  -- ^ The width of the image.
     , height :: C f Double -- ^ The height of the image.

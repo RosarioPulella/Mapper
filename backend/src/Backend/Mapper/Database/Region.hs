@@ -20,7 +20,7 @@ like do we have the location separately? or do we pull out other info from the p
 
 data RegionT f = Region {
       on_map :: PrimaryKey MapT f -- ^ The map this region is on.
-    , id :: C f Int32               -- ^ the id of the region on the map.
+    , id :: C f Int32             -- ^ the id of the region on the map.
     , x :: C f Double             -- ^ The x position of the region.
     , y :: C f Double             -- ^ The y position of the region.
     , svg_path :: C f Text        -- ^ The svg path defining the shape of the region.
