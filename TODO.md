@@ -11,4 +11,6 @@ All the "serious" building/running/testing needs should be done in the ob infra,
 
 Provide a separate infrastructure for analyzing/building/testing the code with hls on newer nixpkgs and ghc, for a quicker less official feedback cycle.
 
-[backend/TODO]
+# Other TODO files
+
+[backend](backend/TODO)
